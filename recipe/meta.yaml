@@ -19,8 +19,7 @@ requirements:
   host:
     - pip
     - python >=3.6
-    # only required to get the version from build.py
-    - pybuilder
+    - poetry
   run:
     - python >=3.6
     - numpy
