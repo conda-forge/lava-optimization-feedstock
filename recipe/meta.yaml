@@ -26,7 +26,6 @@ requirements:
     - lava
     - pandas
     - networkx
-    - dsolve
     - schema
     - scikit-optimize
     - scipy
