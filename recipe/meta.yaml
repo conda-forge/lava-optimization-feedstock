@@ -1,5 +1,5 @@
 {% set name = "lava-optimization" %}
-{% set version = "0.1.2" %}
+{% set version = "0.2.0" %}
 
 
 package:
@@ -8,12 +8,10 @@ package:
 
 source:
   url: https://github.com/lava-nc/lava-optimization/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 22fe8a50d47404563f342afe507ff5177040872664dba6bdd1598df8eb31d303
-  patches:
-    - fix-setup-py.patch
+  sha256: a2648147916b6f42dd4e300c108c6cdb5185b24075c14d93b77cf67b05f054bc
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,12 +19,16 @@ requirements:
   host:
     - pip
     - python >=3.6
-    # only required to get the version from build.py
-    - pybuilder
+    - poetry
   run:
     - python >=3.6
     - numpy
     - lava
+    - pandas
+    - networkx
+    - schema
+    - scikit-optimize
+    - scipy
 
 test:
   source_files:
@@ -36,7 +38,14 @@ test:
     - lava.lib.optimization.solvers
     - lava.lib.optimization.solvers.qp.solver
   commands:
+    - ipython kernel install --name "python3" --user
     - python -m unittest
+  requires:
+    - asteval
+    - nbformat
+    - nbconvert
+    - ipython
+    - ipykernel
 
 about:
   home: https://github.com/lava-nc/lava-optimization
