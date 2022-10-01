@@ -24,6 +24,9 @@ requirements:
     - python >=3.6
     - numpy
     - lava
+    - asteval
+    - nbformat
+    - pandas
 
 test:
   source_files:
