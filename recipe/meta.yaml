@@ -26,6 +26,7 @@ requirements:
     - lava
     - asteval
     - nbformat
+    - nbconvert
     - pandas
 
 test:
