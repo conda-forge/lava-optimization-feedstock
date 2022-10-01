@@ -24,9 +24,6 @@ requirements:
     - python >=3.6
     - numpy
     - lava
-    - asteval
-    - nbformat
-    - nbconvert
     - pandas
 
 test:
@@ -37,7 +34,14 @@ test:
     - lava.lib.optimization.solvers
     - lava.lib.optimization.solvers.qp.solver
   commands:
+    - ipython kernel install --name "python3" --user
     - python -m unittest
+  requires:
+    - asteval
+    - nbformat
+    - nbconvert
+    - ipython
+    - ipykernel
 
 about:
   home: https://github.com/lava-nc/lava-optimization
