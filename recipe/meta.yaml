@@ -25,6 +25,11 @@ requirements:
     - numpy
     - lava
     - pandas
+    - networkx
+    - dsolve
+    - schema
+    - scikit-optimize
+    - scipy
 
 test:
   source_files:
