@@ -1,5 +1,5 @@
 {% set name = "lava-optimization" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/lava-nc/lava-optimization/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 69923a10a9e7af161051c816c6f8b0deabad1927fed76493bfe9750de1c7b7e9
+  sha256: 186db96b40e6f185e0ec036bd24ddb4844779d1a29040fcc19cdf5422fe80717
 
 build:
   number: 0

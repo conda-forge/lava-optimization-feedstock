@@ -1,11 +1,11 @@
-About lava-optimization
-=======================
+About lava-optimization-feedstock
+=================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lava-optimization-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/lava-nc/lava-optimization
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lava-optimization-feedstock/blob/main/LICENSE.txt)
 
 Summary: A library of solvers that leverage neuromorphic hardware for constrained optimization.
 
