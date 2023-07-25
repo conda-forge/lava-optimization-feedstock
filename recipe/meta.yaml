@@ -1,5 +1,5 @@
 {% set name = "lava-optimization" %}
-{% set version = "0.2.4" %}
+{% set version = "0.3.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/lava-nc/lava-optimization/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 186db96b40e6f185e0ec036bd24ddb4844779d1a29040fcc19cdf5422fe80717
+  sha256: 0b4d64c53edb2e32fa7d4da15312e58051a9ed49ebcdc36ed0e7119ff178d78a
 
 build:
   number: 0
@@ -36,7 +36,7 @@ test:
   imports:
     - lava.lib.optimization.problems.problems
     - lava.lib.optimization.solvers
-    - lava.lib.optimization.solvers.qp.solver
+    - lava.lib.optimization.solvers.generic.qp.solver
   commands:
     - ipython kernel install --name "python3" --user
     - python -m unittest
