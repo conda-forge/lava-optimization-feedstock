@@ -36,7 +36,7 @@ test:
   imports:
     - lava.lib.optimization.problems.problems
     - lava.lib.optimization.solvers
-    - lava.lib.optimization.solvers.qp.solver
+    - lava.lib.optimization.solvers.generic.qp.solver
   commands:
     - ipython kernel install --name "python3" --user
     - python -m unittest
