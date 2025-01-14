@@ -11,17 +11,17 @@ source:
   sha256: 67e8f80028a9334722e3b797a0818e77ca7c385c3e7521d6d1030b5235cf5f1c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6,<3.11
+    - python {{ python_min }}
     - poetry
   run:
-    - python >=3.6,<3.11
+    - python >={{ python_min }},<3.11
     - numpy
     - lava
     - pandas
@@ -46,6 +46,7 @@ test:
     - nbconvert
     - ipython
     - ipykernel
+    - python {{ python_min }}
 
 about:
   home: https://github.com/lava-nc/lava-optimization
